@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+
+{% block title %}About {% endblock %}
+
+{% block body %}
+    <!-- Page-->
+      <!-- Page Header-->
+      <header class="page-head bg-blog">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap bg-transparent" style="height: auto;">
+          <nav class="rd-navbar rd-navbar-original rd-navbar-static" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fullwidth" data-xl-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-device-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-device-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-stick-up-offset="100px">
+            <!--(data-layout='rd-navbar-fixed',data-sm-layout='rd-navbar-fullwidth', data-lg-layout=rd_navbar_data_ajuster )-->
+            <div class="rd-navbar-top-panel bg-accent">
+              <div class="rd-navbar-inner">
+                <button class="rd-navbar-collapse-toggle toggle-original" data-rd-navbar-toggle=".list-inline" type="submit"><span></span></button><a class="fa-envelope" href="mailto:#">info@demolink.org</a><a class="fa-mobile-phone preffix-2" href="callto:#">1-800-1234-567</a>
+                <ul class="list-inline pull-right toggle-original-elements">
+                  <li><a class="fa-facebook" href="#"></a></li>
+                  <li><a class="fa-twitter" href="#"></a></li>
+                  <li><a class="fa-pinterest-p" href="#"></a></li>
+                  <li><a class="fa-vimeo" href="#"></a></li>
+                  <li><a class="fa-google-plus" href="#"></a></li>
+                  <li><a class="fa-rss" href="#"></a></li>
+                  <li class="text-left"><a class="fa-envelope" href="mailto:#">info@demolink.org</a></li>
+                  <li class="text-left"><a class="fa-mobile-phone" href="callto:#">1-800-1234-567</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rd-navbar-inner">
+              <!-- RD Navbar Panel-->
+              <div class="rd-navbar-panel">
+                <!-- RD Navbar Toggle-->
+                <button class="rd-navbar-toggle toggle-original" data-rd-navbar-toggle=".rd-navbar-nav-wrap" type="submit"><span></span></button>
+                <!-- RD Navbar Brand-->
+                <div class="rd-navbar-brand"><a class="brand-name" href="{{ url_for('home') }}.html"><img src="static/images/logo-default.png" alt=""></a></div>
+              </div>
+              <div class="rd-navbar-nav-wrap toggle-original-elements">
+                <!-- RD Navbar Nav-->
+                <ul class="rd-navbar-nav">
+                  <li><a href="{{ url_for('home') }}">Home</a></li>
+                  <li class="rd-navbar--has-dropdown rd-navbar-submenu"><a href="{{ url_for('catalog') }}">Catalog</a><span class="rd-navbar-submenu-toggle"></span>
+                    <ul class="rd-navbar-dropdown">
+                      <li><a href="movie-details.html">Movie Details</a></li>
+                    </ul>
+                  </li>
+                  <li class="rd-navbar--has-dropdown rd-navbar-submenu"><a href="{{ url_for('news') }}">News</a><span class="rd-navbar-submenu-toggle"></span>
+                    <ul class="rd-navbar-dropdown">
+                      <li><a href="blog_archive.html">Blog Archive</a></li>
+                      <li><a href="blog_post.html">Post page</a></li>
+                      <li><a href="left_sidebar.html">Blog with Left Sidebar</a></li>
+                    </ul>
+                  </li>
+                  <li class="rd-navbar--has-megamenu rd-navbar-submenu"><a href="{{ url_for('pages') }}">Pages</a><span class="rd-navbar-submenu-toggle"></span>
+                    <!-- RD Navbar Megamenu-->
+                    <ul class="rd-navbar-dropdown">
+                      <li>
+                        <ul>
+                          <li><a href="{{ url_for('pages') }}">Gallery</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="active"><a href="{{ url_for('about') }}">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <section class="relative text-center">
+          <div class="container">
+            <div class="jumbotron text-center">
+              <h1><small>Get in Touch</small><span class="font-weight-bold">contact information</span>
+              </h1>
+            </div>
+          </div>
+        </section>
+      </header>
+      <!-- Page Content-->
+      <main class="page-content">
+        <section class="bg-light section-xl">
+          <ol class="breadcrumb">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li class="active">Contact Us</li>
+          </ol>
+        </section>
+        <section class="section section-inset-1">
+          <div class="container">
+            <h2>Contact us</h2>
+            <hr>
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-8">
+                <!-- RD Mailform-->
+                <form class="rd-mailform text-left" data-form-output="form-output-global" data-form-type="forms" method="post" action="bat/rd-mailform.php" novalidate="novalidate">
+                  <div class="row row-10">
+                    <div class="col-12 col-md-6">
+                      <div class="form-wrap">
+                        <label class="form-label rd-input-label" for="forms-name">Your first name...</label>
+                        <input class="form-input form-control-has-validation form-control-last-child" id="forms-name" type="text" name="name" data-constraints="@Required"><span class="form-validation"></span>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-wrap">
+                        <label class="form-label rd-input-label" for="forms-last-name">Your last name...</label>
+                        <input class="form-input form-control-has-validation form-control-last-child" id="forms-last-name" type="text" name="last-name" data-constraints="@Required"><span class="form-validation"></span>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-wrap">
+                        <label class="form-label rd-input-label" for="forms-email">Your e-mail...</label>
+                        <input class="form-input form-control-has-validation form-control-last-child" id="forms-email" type="email" name="email" data-constraints="@Email @Required"><span class="form-validation"></span>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-wrap">
+                        <label class="form-label rd-input-label" for="forms-phone">Your phone...</label>
+                        <input class="form-input form-control-has-validation form-control-last-child" id="forms-phone" type="text" name="phone" data-constraints="@PhoneNumber @Required"><span class="form-validation"></span>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-12">
+                      <div class="form-wrap">
+                        <label class="form-label rd-input-label" for="forms-message">Message:</label>
+                        <textarea class="form-input form-control-has-validation form-control-last-child" id="forms-message" name="message" data-constraints="@Required"></textarea><span class="form-validation"></span>
+                      </div>
+                    </div>
+                    <div class="col-12 text-center">
+                      <button class="btn btn-success btn-sm" type="submit">Send Message</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section-inset-3">
+          <div class="container">
+            <div class="row row-45 justify-content-xl-around text-md-left">
+              <div class="col-12 col-md-6 col-xl-3">
+                <address>
+                  <div class="media flex-column flex-md-row">
+                    <div class="media-left"><span class="icon icon-success icon-sm fa-map-marker"></span></div>
+                    <div class="media-body">
+                      <p class="h6">Post Address</p><span><a href="#">
+                          The Company Name Inc.9863 - 9867 Mill Road,
+                          Cambridge, MG09 99HT.</a></span>
+                    </div>
+                  </div>
+                </address>
+              </div>
+              <div class="col-12 col-md-6 col-xl-3">
+                <address>
+                  <div class="media flex-column flex-md-row">
+                    <div class="media-left"><span class="icon icon-success icon-sm fa-phone"></span></div>
+                    <div class="media-body">
+                      <p class="h6">Phone</p>
+                      <dl class="dl-horizontal">
+                        <dt>Phone:</dt>
+                        <dd><a href="tel:#">+1 800 603 6035</a></dd>
+                      </dl>
+                      <dl class="dl-horizontal">
+                        <dt>FAX:</dt>
+                        <dd><a href="tel:#">+1 800 889 9898</a></dd>
+                      </dl>
+                    </div>
+                  </div>
+                </address>
+              </div>
+              <div class="col-12 col-md-6 col-xl-3">
+                <address>
+                  <div class="media flex-column flex-md-row">
+                    <div class="media-left"><span class="icon icon-success icon-sm fa-envelope"></span></div>
+                    <div class="media-body">
+                      <p class="h6">Email</p><a href="mailto:#">mail@demolink.org</a>
+                    </div>
+                  </div>
+                </address>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- Rd Mailform result field-->
+      <div class="rd-mailform-validate"></div>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Java script-->
+    <script src="static/js/core.min.js"></script>
+    <script src="static/js/script.js"></script>
+    <!-- coded by Starlight-->
+
+{% endblock %}

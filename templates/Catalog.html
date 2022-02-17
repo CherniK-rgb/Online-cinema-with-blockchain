@@ -1,0 +1,285 @@
+{% extends 'base.html' %}
+
+{% block title %}Catalog {% endblock %}
+
+{% block body %}
+ <!-- Page-->
+      <header class="page-head">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap bg-transparent rd-navbar-wrap-mod-1">
+          <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fullwidth" data-xl-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-device-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-device-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-stick-up-offset="100px">
+            <!--(data-layout='rd-navbar-fixed',data-sm-layout='rd-navbar-fullwidth', data-lg-layout=rd_navbar_data_ajuster )-->
+            <div class="rd-navbar-top-panel bg-accent">
+              <div class="rd-navbar-inner">
+                <button class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".list-inline" type="submit"><span></span></button><a class="fa-envelope" href="mailto:#">info@demolink.org</a><a class="fa-mobile-phone preffix-2" href="callto:#">1-800-1234-567</a>
+                <ul class="list-inline pull-right">
+                  <li><a class="fa-facebook" href="#"></a></li>
+                  <li><a class="fa-twitter" href="#"></a></li>
+                  <li><a class="fa-pinterest-p" href="#"></a></li>
+                  <li><a class="fa-vimeo" href="#"></a></li>
+                  <li><a class="fa-google-plus" href="#"></a></li>
+                  <li><a class="fa-rss" href="#"></a></li>
+                  <li class="text-left"><a class="fa-envelope" href="mailto:#">info@demolink.org</a></li>
+                  <li class="text-left"><a class="fa-mobile-phone" href="callto:#">1-800-1234-567</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rd-navbar-inner">
+              <!-- RD Navbar Panel-->
+              <div class="rd-navbar-panel">
+                <!-- RD Navbar Toggle-->
+                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap" type="submit"><span></span></button>
+                <!-- RD Navbar Brand-->
+                <div class="rd-navbar-brand"><a class="brand-name" href="{{ url_for('home') }}"><img src="static/images/logo-default.png" alt=""></a></div>
+              </div>
+              <div class="rd-navbar-nav-wrap">
+                <!-- RD Navbar Nav-->
+                <ul class="rd-navbar-nav">
+                  <li><a href="{{ url_for('home') }}">Home</a></li>
+                  <li class="active"><a href="{{ url_for('catalog') }}">Catalog</a>
+                    <ul class="rd-navbar-dropdown">
+                      <li><a href="movie-details.html">Movie Details</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="{{ url_for('news') }}">News</a>
+                    <ul class="rd-navbar-dropdown">
+                      <li><a href="blog_archive.html">Blog Archive</a></li>
+                      <li><a href="blog_post.html">Post page</a></li>
+                      <li><a href="left_sidebar.html">Blog with Left Sidebar</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="{{ url_for('pages') }}">Pages</a>
+                    <!-- RD Navbar Gallery-->
+                    <ul class="rd-navbar-dropdown">
+                      <li>
+                        <ul>
+                          <li><a href="{{ url_for('pages') }}">Gallery</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="{{ url_for('about') }}">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <section class="owl-slider">
+          <div class="container">
+            <div class="row">
+              <div class="owl-carousel owl-carousel-mod-1 owl-carousel-mod-3" data-items="1" data-md-items="2" data-xl-items="2" data-loop="true" data-margin="15" data-dots="true" data-autoplay="true" data-lg-dots-each="2" data-xs-stage-padding="15">
+                <div class="owl-item">
+                  <div class="owl-item-slide-caption">
+                    <div class="col-12 wow-outer text-left"><a href="movie-details.html"><img src="static/images/slider-1-570x364.jpg" alt="" width="570" height="364"/></a>
+                      <h6 class="offset-top-25"><a href="movie-details.html">IT (2017)</a></h6>
+                      <p>2017, USA, Drama, Horror, Thriller</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="owl-item">
+                  <div class="owl-item-slide-caption">
+                    <div class="col-12 wow-outer text-left"><a href="movie-details.html"><img src="static/images/slider-2-570x364.jpg" alt="" width="570" height="364"/></a>
+                      <h6 class="offset-top-25"><a href="movie-details.html">The Haunting of Hill House</a></h6>
+                      <p>2018, USA, Drama, Horror, Mystery</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="owl-item">
+                  <div class="owl-item-slide-caption">
+                    <div class="col-12 wow-outer text-left"><a href="movie-details.html"><img src="static/images/slider-3-570x364.jpg" alt="" width="570" height="364"/></a>
+                      <h6 class="offset-top-25"><a href="movie-details.html">First Man (2018)</a></h6>
+                      <p>2018, USA, Biography, Drama, History</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="owl-item">
+                  <div class="owl-item-slide-caption">
+                    <div class="col-12 wow-outer text-left"><a href="movie-details.html"><img src="static/images/slider-4-570x364.jpg" alt="" width="570" height="364"/></a>
+                      <h6 class="offset-top-25"><a href="movie-details.html">Black Mirror</a></h6>
+                      <p>2011, USA, Drama, Sci-Fi, Thriller</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="owl-item">
+                  <div class="owl-item-slide-caption">
+                    <div class="col-12 wow-outer text-left"><a href="movie-details.html"><img src="static/images/slider-5-570x364.jpg" alt="" width="570" height="364"/></a>
+                      <h6 class="offset-top-25"><a href="movie-details.html">Daredevil</a></h6>
+                      <p>2015, USA, Drama, Sci-Fi, Thriller</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="owl-item">
+                  <div class="owl-item-slide-caption">
+                    <div class="col-12 wow-outer text-left"><a href="movie-details.html"><img src="static/images/slider-6-570x364.jpg" alt="" width="570" height="364"/></a>
+                      <h6 class="offset-top-25"><a href="movie-details.html">Stranger Things</a></h6>
+                      <p>2016, USA, Drama, Fantasy, Horror</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </header>
+
+      <!-- Page Content-->
+      <main class="page-content">
+        <section class="bg-light section-xl">
+          <ol class="breadcrumb">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li class="active">Catalog</li>
+          </ol>
+        </section>
+        <section class="section section-inset-1">
+          <div class="container">
+            <h2>Watch movies online</h2>
+            <hr/>
+            <div class="row justify-content-center">
+              <div class="col-12">
+                <div class="container">
+                  <div class="row justify-content-center">
+                    <div class="col-12 col-xl-8">
+                      <form class="rd-mailform subscribe-form subscribe-form-2" data-result-class="rd-mailform-validate" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
+                        <div class="form-wrap form-wrap-2">
+                          <label class="form-label" for="forms-news-email">Find Movies...</label>
+                          <input class="form-input form-input-2" id="forms-news-email" type="text" name="text" data-constraints="@Required">
+                          <label class="form-label" for="involve-form-movie"></label>
+                          <select class="form-input form-select" id="involve-form-movie" name="Movies" data-constraints="@Required" data-placeholder="Select Your Movie" data-container-class="select-gray" data-dropdown-class="select-gray">
+                            <option label="Movies"></option>
+                            <option selected>All Categories</option>
+                            <option>Drama</option>
+                            <option>Horror</option>
+                            <option>Action</option>
+                            <option>Comedy</option>
+                          </select>
+                        </div>
+                        <div class="button-wrap">
+                          <button class="btn btn-sm btn-third">Search</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-inset-1">
+          <div class="container isotope-wrap">
+            <div class="isotope offset-top-10 masonry-gallery row thumbnail-main-section" data-isotope-layout="masonry" data-isotope-group="gallery" data-lg-thumbnail="false" data-addClass="main">
+              <div class="thumbnail-gallery isotope-item col-9 col-sm-6 col-lg-3" data-filter="type-1">
+                <div class="thumbnail-gallery-wrapper"><img src="static/images/gallery-1.jpg" alt="">
+                  <div class="caption-2">
+                    <div class="caption-wrapper"><a href="https://youtu.be/20bpjtCbCz0" data-lightgallery="item"><span class="icon icon-white fl-line-ui-play126"></span></a></div>
+                  </div>
+                </div>
+                <div class="div text-left">
+                  <h6 class="title-block offset-top-20"><a href="movie-details.html">Ant-Man and the Wasp</a></h6>
+                  <p class="text-gray">2018, USA, Action</p>
+                  <div class="review"><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2 text-gray"></span></div>
+                </div>
+              </div>
+              <div class="thumbnail-gallery isotope-item col-9 col-sm-6 col-lg-3" data-filter="type-1">
+                <div class="thumbnail-gallery-wrapper"><img src="static/images/gallery-2.jpg" alt="">
+                  <div class="caption-2">
+                    <div class="caption-wrapper"><a href="https://youtu.be/20bpjtCbCz0" data-lightgallery="item"><span class="icon icon-white fl-line-ui-play126"></span></a></div>
+                  </div>
+                </div>
+                <div class="div text-left">
+                  <h6 class="title-block offset-top-20"><a href="movie-details.html">Avengers: Infinity War</a></h6>
+                  <p class="text-gray">2018, USA, Action, Fantasy</p>
+                  <div class="review"><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span></div>
+                </div>
+              </div>
+              <div class="thumbnail-gallery isotope-item col-9 col-sm-6 col-lg-3" data-filter="type-1">
+                <div class="thumbnail-gallery-wrapper"><img src="static/images/gallery-3.jpg" alt="">
+                  <div class="caption-2">
+                    <div class="caption-wrapper"><a href="https://youtu.be/20bpjtCbCz0" data-lightgallery="item"><span class="icon icon-white fl-line-ui-play126"></span></a></div>
+                  </div>
+                </div>
+                <div class="div text-left">
+                  <h6 class="title-block offset-top-20"><a href="movie-details.html">The Flash</a></h6>
+                  <p class="text-gray">2014, USA, Adventure, Fantasy</p>
+                  <div class="review"><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span></div>
+                </div>
+              </div>
+              <div class="thumbnail-gallery isotope-item col-9 col-sm-6 col-lg-3" data-filter="type-2">
+                <div class="thumbnail-gallery-wrapper"><img src="static/images/gallery-4.jpg" alt="">
+                  <div class="caption-2">
+                    <div class="caption-wrapper"><a href="https://youtu.be/20bpjtCbCz0" data-lightgallery="item"><span class="icon icon-white fl-line-ui-play126"></span></a></div>
+                  </div>
+                </div>
+                <div class="div text-left">
+                  <h6 class="title-block offset-top-20"><a href="movie-details.html">Game of Thrones</a></h6>
+                  <p class="text-gray">2018, USA, Adventure, Action</p>
+                  <div class="review"><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span></div>
+                </div>
+              </div>
+              <div class="thumbnail-gallery isotope-item col-9 col-sm-6 col-lg-3" data-filter="type-1">
+                <div class="thumbnail-gallery-wrapper"><img src="static/images/gallery-5.jpg" alt="">
+                  <div class="caption-2">
+                    <div class="caption-wrapper"><a href="https://youtu.be/20bpjtCbCz0" data-lightgallery="item"><span class="icon icon-white fl-line-ui-play126"></span></a></div>
+                  </div>
+                </div>
+                <div class="div text-left">
+                  <h6 class="title-block offset-top-20"><a href="movie-details.html">Titans</a></h6>
+                  <p class="text-gray">2018, USA, Drama,  Adventure</p>
+                  <div class="review"><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2 text-gray"></span></div>
+                </div>
+              </div>
+              <div class="thumbnail-gallery isotope-item col-9 col-sm-6 col-lg-3" data-filter="type-2">
+                <div class="thumbnail-gallery-wrapper"><img src="static/images/gallery-6.jpg" alt="">
+                  <div class="caption-2">
+                    <div class="caption-wrapper"><a href="https://youtu.be/20bpjtCbCz0" data-lightgallery="item"><span class="icon icon-white fl-line-ui-play126"></span></a></div>
+                  </div>
+                </div>
+                <div class="div text-left">
+                  <h6 class="title-block offset-top-20"><a href="movie-details.html">Aquaman</a></h6>
+                  <p class="text-gray">2018, USA, Action, Fantasy</p>
+                  <div class="review"><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span></div>
+                </div>
+              </div>
+              <div class="thumbnail-gallery isotope-item col-9 col-sm-6 col-lg-3" data-filter="type-2">
+                <div class="thumbnail-gallery-wrapper"><img src="static/images/gallery-7.jpg" alt="">
+                  <div class="caption-2">
+                    <div class="caption-wrapper"><a href="https://youtu.be/20bpjtCbCz0" data-lightgallery="item"><span class="icon icon-white fl-line-ui-play126"></span></a></div>
+                  </div>
+                </div>
+                <div class="div text-left">
+                  <h6 class="title-block offset-top-20"><a href="movie-details.html">Hold the Dark</a></h6>
+                  <p class="text-gray">2018, USA, Adventure, Mystery</p>
+                  <div class="review"><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span></div>
+                </div>
+              </div>
+              <div class="thumbnail-gallery isotope-item col-9 col-sm-6 col-lg-3" data-filter="type-2">
+                <div class="thumbnail-gallery-wrapper"><img src="static/images/gallery-8.jpg" alt="">
+                  <div class="caption-2">
+                    <div class="caption-wrapper"><a href="https://youtu.be/20bpjtCbCz0" data-lightgallery="item"><span class="icon icon-white fl-line-ui-play126"></span></a></div>
+                  </div>
+                </div>
+                <div class="div text-left">
+                  <h6 class="title-block offset-top-20"><a href="movie-details.html">The Predator</a></h6>
+                  <p class="text-gray">2018, USA, Adventure, Horror</p>
+                  <div class="review"><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span><span class="icon fa-star icon-waring-2"></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="pagination pagination-center offset-pagination">
+            <li class="disabled"><span class="page-item"></span></li>
+            <li class="disabled"><span class="page-item">1</span></li>
+            <li><a class="page-item" href="#">2</a></li>
+            <li><a class="page-item" href="#">3</a></li>
+            <li><a class="page-item" href="#">4</a></li>
+            <li><a class="page-item" href="#"></a></li>
+          </ul>
+        </section>
+      </main>
+      <!-- Rd Mailform result field-->
+      <div class="rd-mailform-validate"></div>
+
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- coded by Starlight-->
+{% endblock %}
+
