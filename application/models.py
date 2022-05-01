@@ -22,14 +22,14 @@ class Tag(db.Model):
     message = db.relationship('Message', backref=db.backref('tags', lazy=True))
 
 
-class User (db.Model, UserMixin):
+class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     login = db.Column(db.String(128), nullable=False, unique=True)
     password = db.Column(db.String(255), nullable=False)
 
 
-class Admin1kino (db.Model, UserMixin):
-    login = db.Column(db.String(128), primary_key=True, nullable=False )
+class Admin1kino(db.Model, UserMixin):
+    login = db.Column(db.String(128), primary_key=True, nullable=False)
     password = db.Column(db.String(255), nullable=False)
 
 
