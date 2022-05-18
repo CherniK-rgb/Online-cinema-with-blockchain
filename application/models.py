@@ -1,7 +1,5 @@
 from flask_login import UserMixin
-
 from application import db, manager
-
 
 class Message(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -22,10 +20,12 @@ class Tag(db.Model):
     message = db.relationship('Message', backref=db.backref('tags', lazy=True))
 
 
-class User(db.Model, UserMixin):
+class User (db.Model, UserMixin):
+
+    __tablename__ = "users"
     id = db.Column(db.Integer, primary_key=True)
     login = db.Column(db.String(128), nullable=False, unique=True)
-    password = db.Column(db.String(255), nullable=False)
+    password = db.Column(db.String(), nullable=False)
 
 
 class Admin1kino(db.Model, UserMixin):

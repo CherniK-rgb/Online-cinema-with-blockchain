@@ -4,9 +4,10 @@ from flask_login import LoginManager
 
 
 app = Flask(__name__)
-app.secret_key = 'some_secret_password_Aksenof_love_db'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///kino.db'
+app.secret_key = 'some_secret_password'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:123456@localhost/KinoMaster'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 db = SQLAlchemy(app)
 manager = LoginManager(app)
 

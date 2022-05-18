@@ -20,26 +20,25 @@ def catalog():
 
 @app.route('/news')
 @login_required
-
 def news():
     return render_template("News.html")
 
 
 @app.route('/pages')
 @login_required
-
 def pages():
     return render_template("Pages.html")
 
 
 @app.route('/about')
+@login_required
 def about():
     return render_template("About.html")
 
 
 @app.route('/posts', methods=['POST', 'GET'])
 def posts():
-    users= User.query.orser_by(User.login).all()
+    users = User.query.orser_by(User.login).all()
     return render_template("posts.html", users=users)
 
 
@@ -50,15 +49,16 @@ def user():
         intro = request.form['intro']
         text = request.form['text']
 
-        useres = Useres(title=title, intro=intro, text=text)
+        useres = User(title=title, intro=intro, text=text)
 
+        # noinspection PyBroadException
         try:
             db.session.add(useres)
             db.session.commit()
             return redirect('/home')
         except:
             return "Произошла ошибка при создании статьи"
-    else :
+    else:
         return render_template("User.html")
 
 
@@ -96,13 +96,11 @@ def login_page():
     password = request.form.get('password')
 
     if login and password:
-        user = User.query.filter_by(login=login).first()
+        userss = User.query.filter_by(login=login).first()
 
-        if user and check_password_hash(user.password, password):
-            login_user(user)
-
+        if userss and check_password_hash(userss.password, password):
+            login_user(userss)
             next_page = request.args.get('next')
-
             return redirect(next_page)
         else:
             flash('Login or password is not correct')
@@ -116,19 +114,18 @@ def login_page():
 def register():
     login = request.form.get('login')
     password = request.form.get('password')
-    password2 = request.form.get('password2')
+    passwordd = request.form.get('password2')
 
     if request.method == 'POST':
-        if not (login or password or password2):
+        if not (login or password or passwordd):
             flash('Please, fill all fields!')
-        elif password != password2:
+        elif password != passwordd:
             flash('Passwords are not equal!')
         else:
             hash_pwd = generate_password_hash(password)
             new_user = User(login=login, password=hash_pwd)
             db.session.add(new_user)
             db.session.commit()
-
             return redirect(url_for('login_page'))
 
     return render_template('register.html')
