@@ -27,9 +27,6 @@ The whole practical significance lies in the full or partial implementation of t
 
 ## Documentation
 
-Frontend
-Backend
-
 ## Developers
 
 - [CherniK]([GitHub Profile Link](https://github.com/CherniK-rgb))
